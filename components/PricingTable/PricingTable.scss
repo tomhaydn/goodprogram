@@ -1,0 +1,90 @@
+@import "../../styles/variables.scss";
+
+.pricingTable {
+   
+    width: 100%;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    border-collapse: collapse;
+    z-index: 1;
+
+    transition: all 0.3s ;
+    -webkit-transition: all 0.3s ;
+    -moz-transition: all 0.3s ;
+    -ms-transition: all 0.3s ;
+    -o-transition: all 0.3s ;
+
+    & td {
+       padding: 1rem 0rem;
+    }
+
+    &--emphasis {
+        z-index: 3;
+        padding: 0rem;
+        transform: translateY(-1rem);
+        -webkit-transform: translateY(-1rem);
+        -moz-transform: translateY(-1rem);
+        -ms-transform: translateY(-1rem);
+        -o-transform: translateY(-1rem);
+    }
+
+
+    &__header {
+        background-color: $color__primary;
+        padding: 1rem;
+        text-align: center;
+        color: white;
+        font-size: 1.5rem;
+        margin-top: 0;
+    }
+
+    &__price {
+        padding: 1rem 1rem 1.5rem 1rem;
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 300;
+    }
+
+    &__zeros {
+        font-size: 1rem;
+        opacity: 0.7;
+    }
+
+    &__priceUnderline {
+        background-color: $color__primary;
+        height: 5px;
+        width: 3rem;
+        margin: auto;
+        margin-bottom: 1.5rem;
+    }
+
+    &__item {
+
+
+        &:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+
+        &--highlighted {
+            background-color: yellow;
+        }
+    }
+
+    &__itemText {
+        padding: 1rem 1rem !important;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0px;
+    }
+
+    &__itemIcon {
+        display: inline-flex;
+        margin-right: 0.5rem;
+    }
+
+}

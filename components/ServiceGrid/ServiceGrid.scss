@@ -1,0 +1,119 @@
+@import "../../styles/variables.scss";
+
+.serviceGrid {
+  width: 100%;
+
+  &__text {
+    &--header {
+      @include s {
+        font-size: 1.75rem;
+      }
+
+      @include m {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    &--sub {
+      @include s {
+        font-size: 1rem;
+      }
+
+      @include m {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    border: 1px solid #f2f2f2;
+    background-color: white;
+
+    @include s {
+      min-height: 0rem;
+    }
+
+    @include m {
+      min-height: 15rem;
+    }
+
+    @include l {
+      min-height: 10rem;
+    }
+
+    @include xl {
+      min-height: 8rem;
+    }
+
+    &:hover {
+      background-color: $color__primary;
+      color: white;
+    }
+
+    & p {
+      margin: 0px;
+    }
+  }
+
+  &__itemText {
+    @include s {
+      padding: 1rem;
+    }
+
+    @include m {
+      padding: 0.25rem;
+    }
+
+    @include l {
+      padding: 0.5rem;
+    }
+
+    @include xl {
+      padding: 1rem;
+    }
+  }
+
+  &__icon {
+    padding: 0.5rem;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include s {
+      justify-content: left;
+    }
+
+    @include m {
+      justify-content: center;
+    }
+
+    img,
+    svg {
+      color: $color__primary;
+      height: 100%;
+      @include s {
+        width: 20%;
+      }
+
+      @include m {
+        width: 50%;
+      }
+    }
+    overflow: hidden;
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+  }
+}

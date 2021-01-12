@@ -1,0 +1,11 @@
+node_modules/
+.next/
+Dockerfile
+.drone.yml
+next.config.js
+img/
+documents/
+fonts/
+Layout/
+sitemapGen.js
+legal/

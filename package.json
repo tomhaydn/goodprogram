@@ -1,0 +1,34 @@
+{
+  "name": "GP_MAIN",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next -p 8080",
+    "build": "next build",
+    "start": "next start",
+    "analyze": "cross-env ANALYZE=true next build",
+    "sitemap": "node sitemapGen"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "axios": "^0.19.2",
+    "next": "^10.0.3",
+    "next-seo": "^4.5.0",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-device-detect": "^1.12.1",
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.10.0",
+    "react-minimal-pie-chart": "^8.0.1",
+    "react-reveal": "^1.2.2",
+    "react-scroll-parallax": "^2.3.3",
+    "reaptcha": "^1.7.2",
+    "update": "^0.7.4"
+  },
+  "devDependencies": {
+    "nextjs-sitemap-generator": "^1.0.0"
+  }
+}

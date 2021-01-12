@@ -1,0 +1,30 @@
+@import "../../styles/variables.scss";
+
+.cta {
+  width: 100%;
+  background: url(/img/start1.jpg) center/cover;
+  box-sizing: border-box;
+  position: relative;
+
+  &__inner {
+    z-index: 3;
+    padding: 7rem 0rem 7rem 0rem;
+    margin: auto;
+
+    @include s {
+      width: 95%;
+    }
+    @include m {
+      width: 70%;
+    }
+  }
+
+  &__overlay {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: $color__ternary;
+    position: absolute;
+    opacity: 0.86;
+  }
+}

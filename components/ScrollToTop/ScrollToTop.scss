@@ -1,0 +1,35 @@
+@import "../../styles/variables.scss";
+
+.scrollToTop {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: $color__primary;
+  height: 3rem;
+  width: 0rem;
+  z-index: 99999;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  opacity: 0;
+  display: flex;
+
+  &--visible {
+    opacity: 1;
+    width: 3rem;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &__icon {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+}

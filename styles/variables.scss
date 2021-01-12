@@ -1,0 +1,78 @@
+$break-s: 0px;
+$break-m: 768px;
+$break-l: 1224px;
+$break-xl: 1824px;
+
+$color__primary: #32befa;
+$color__secondary: #7dd5fb;
+$color__ternary: #185d7a;
+$color__neutral: #3d687a;
+
+$nav--height: 3rem;
+
+@mixin s {
+  @media (min-width: #{$break-s}) {
+    @content;
+  }
+}
+
+@mixin m {
+  @media (min-width: #{$break-m}) {
+    @content;
+  }
+}
+
+@mixin l {
+  @media (min-width: #{$break-l}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{$break-xl}) {
+    @content;
+  }
+}
+
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin font-face($name, $path, $ext, $style) {
+  $src: null;
+  $weights: 0, 100, 200, 300, 400, 500, 600, 700, 800, 900;
+  $ranges: Light, Thin, Regular, Medium, Bold, Black;
+
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype",
+  );
+
+  @each $weight in $weights {
+    @if $weight < 300 {
+      $src: url(quote("/" + $path + "/" + $name + "-Thin" + ".ttf"))
+        format("truetype");
+    } @else if $weight < 500 {
+      $src: url(quote("/" + $path + "/" + $name + "-Light" + ".ttf"))
+        format("truetype");
+    } @else if $weight < 600 {
+      $src: url(quote("/" + $path + "/" + $name + "-Regular" + ".ttf"))
+        format("truetype");
+    } @else if $weight < 800 {
+      $src: url(quote("/" + $path + "/" + $name + "-Medium" + ".ttf"))
+        format("truetype");
+    } @else {
+      $src: url(quote("/" + $path + "/" + $name + "-Bold" + ".ttf"))
+        format("truetype");
+    }
+
+    @font-face {
+      font-family: quote($name);
+      font-style: $style;
+      font-weight: $weight;
+      src: $src;
+    }
+  }
+}

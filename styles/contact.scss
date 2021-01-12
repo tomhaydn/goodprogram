@@ -1,0 +1,29 @@
+@import "./variables.scss";
+
+.contact {
+  background-color: $color__primary;
+  padding: 1rem;
+
+  &__item {
+    & td {
+      color: white;
+      text-align: left;
+    }
+  }
+
+  &__link {
+    color: white;
+    padding-left: 0.5rem;
+  }
+
+  &__icon {
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  &__iconWrapper {
+    display: flex;
+    margin: 0px;
+    justify-content: center;
+  }
+}

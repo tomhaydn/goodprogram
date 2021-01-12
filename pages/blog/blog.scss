@@ -1,0 +1,38 @@
+@import "../../styles/variables.scss";
+
+.postCard {
+  transition: all 0.3s;
+
+  &:hover {
+    margin-top: -0.5rem;
+    border-bottom: 0.5rem solid $color--primary;
+    background-color: #f2f2f2;
+  }
+
+  &__figure {
+    width: 100%;
+
+    & figcaption {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__title {
+    padding-top: 1rem;
+    font-family: "Roboto", Arial;
+    font-weight: 300;
+  }
+
+  &__date {
+    padding-top: 0.7rem;
+    font-family: "Roboto", Arial;
+    font-size: 0.7rem;
+    font-weight: 300;
+  }
+}

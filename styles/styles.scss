@@ -1,0 +1,289 @@
+@import "./variables.scss";
+@import "./animations.scss";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+//@include font-face(Roboto, fonts/Roboto, ttf, normal);
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  @include s {
+    font-size: 17px;
+  }
+  @include m {
+    font-size: 14px;
+  }
+
+  @include l {
+    font-size: 15px;
+  }
+
+  @include xl {
+    font-size: 16px;
+  }
+}
+
+.page {
+  &__content {
+    padding-top: 7rem !important;
+  }
+
+  &__row {
+    width: "100%";
+    position: relative;
+    overflow-y: hidden;
+  }
+
+  &__rowContent {
+    margin: auto;
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
+
+    @include s {
+      width: 95%;
+      padding: 2.5rem 0rem;
+    }
+
+    @include m {
+      width: 70%;
+      padding: 5rem 0rem;
+    }
+
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+main {
+  min-height: calc(100vh - 3rem);
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+
+address {
+  font-style: normal !important;
+  font-family: "Roboto", Arial;
+}
+
+.align {
+  &--center {
+    text-align: center;
+  }
+}
+
+figure {
+  margin: 0px;
+}
+
+.color {
+  &--primary {
+    color: $color__primary;
+  }
+
+  &--secondary {
+    color: $color__secondary;
+  }
+
+  &--ternary {
+    color: $color__ternary;
+  }
+
+  &--neutral {
+    color: $color__neutral;
+  }
+}
+
+.bg_color {
+   &--primary {
+    background-color: $color__primary;
+  }
+
+  &--secondary {
+    background-color: $color__secondary;
+  }
+
+  &--ternary {
+    background-color: $color__ternary;
+  }
+
+  &--neutral {
+    background-color: $color__neutral;
+  }
+}
+
+h1 {
+  font-family: "Roboto", sans-serif, Arial;
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif, Arial;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  line-height: 2rem;
+  display: block;
+}
+
+h3 {
+  font-family: "Roboto", Arial;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+  display: block;
+  width: 100%;
+}
+
+p {
+  font-family: "Open Sans", Arial;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+td {
+  font-family: "Roboto", Arial;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: "Roboto", Arial;
+}
+
+a:hover {
+  //opacity: 0.7;
+}
+
+.button {
+  border-radius: 1px;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 0px;
+
+  &--primary {
+    background-color: $color__primary;
+    color: white;
+    transition: all 0.3s;
+    cursor: pointer;
+    font-family: "Roboto", Arial;
+    font-weight: 100;
+    padding: 1.5rem 3rem 1.5rem 3rem;
+
+    &:hover {
+      background-color: $color__ternary;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+
+  &--center-full {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--center-v {
+    align-items: center;
+  }
+
+  &--center-h {
+    justify-content: center;
+  }
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__col {
+    &--outer {
+      @include s {
+        width: 2.5%;
+      }
+      @include m {
+        width: 15%;
+      }
+    }
+
+    &--inner {
+      @include s {
+        width: 95%;
+        padding: 0rem;
+      }
+      @include m {
+        width: 70%;
+        padding: 0rem;
+      }
+    }
+
+    &--half {
+      @include s {
+        width: 100%;
+      }
+      @include m {
+        width: 50%;
+      }
+    }
+
+    &--third {
+      @include s {
+        width: 100%;
+      }
+      @include m {
+        width: 33.33%;
+      }
+    }
+
+    &--two-third {
+      @include s {
+        width: 100%;
+      }
+      @include m {
+        width: 66.66%;
+      }
+    }
+
+    &--quarter {
+      @include s {
+        width: 100%;
+      }
+      @include m {
+        width: 25%;
+      }
+    }
+
+    &--tenth {
+      @include s {
+        width: 100%;
+      }
+      @include m {
+        width: 10%;
+      }
+    }
+
+    &--full {
+      @include s {
+        width: 100%;
+      }
+    }
+  }
+}

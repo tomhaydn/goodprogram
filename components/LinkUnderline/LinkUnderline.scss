@@ -1,0 +1,30 @@
+@import "../../styles/variables.scss";
+
+.linkUnderline {
+  transition: all 0.3s;
+
+  &__blocks {
+  }
+
+  &--disabled {
+  }
+
+  &--active {
+  }
+
+  &__block {
+    height: 0.25rem;
+    background-color: $color__primary;
+    transition: all 0.15s;
+
+    &--hidden {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    &--active {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+}

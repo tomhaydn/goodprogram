@@ -1,0 +1,65 @@
+@import "../../styles/variables.scss";
+
+.timeLine {
+  @include s {
+    padding: 0rem;
+    padding-bottom: 3rem;
+  }
+  @include m {
+    padding: 1rem;
+  }
+
+  @include l {
+    padding: 3rem;
+  }
+
+  @include xl {
+    padding: 5rem;
+  }
+
+  &__line {
+    display: flex;
+    align-items: center;
+
+    &--vertical {
+      width: 10%;
+    }
+  }
+
+  &__lineActual {
+    background-color: $color__primary;
+    &--vertical {
+      width: 5px;
+    }
+
+    &--horizontal {
+      height: 5px;
+      display: inline-block;
+    }
+  }
+
+  &__item {
+    display: flex; //
+  }
+
+  &__itemText {
+    font-family: "Open Sans", sans-serif;
+    padding: 0rem 1rem;
+    width: 45%;
+    &--containing {
+      background-color: $color__primary;
+      p {
+        color: white;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  &__circle {
+    width: 2rem;
+    height: 2rem;
+    background-color: $color__primary;
+    border-radius: 2rem;
+    z-index: 2;
+  }
+}

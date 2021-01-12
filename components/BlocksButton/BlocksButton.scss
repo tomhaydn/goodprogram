@@ -1,0 +1,120 @@
+@import "../../styles/variables.scss";
+
+.blocksButton {
+  font-family: "Roboto", Arial;
+  font-weight: 100;
+  border-radius: 1px;
+  font-size: 1rem;
+  padding: 0px;
+  border: 0px;
+  width: 10rem;
+  min-height: 4rem;
+  position: relative;
+  margin-top: 1rem;
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 0.3s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+
+  &__sleek {
+    &--active {
+      color: white;
+
+      height: 1rem;
+      min-height: 2.5rem !important;
+      overflow: hidden;
+      font-weight: 500;
+    }
+
+    &--disabled {
+      color: black;
+
+      min-height: 2.5rem !important;
+      font-weight: 500;
+    }
+  }
+
+  &__1 {
+    &--active {
+      color: white;
+      border: 2px solid transparent;
+      font-weight: 500;
+    }
+
+    &--disabled {
+      color: white;
+      border: 2px solid $color__primary;
+    }
+  }
+
+  &__2 {
+    &--active {
+      color: white;
+      font-weight: 500;
+      border: 2px solid transparent;
+    }
+
+    &--disabled {
+      color: $color__primary;
+      font-weight: 500;
+      border: 2px solid $color__primary;
+    }
+  }
+
+  &__3 {
+    &--active {
+      color: white;
+      border: 2px solid transparent;
+      font-weight: 500;
+    }
+
+    &--disabled {
+      color: white;
+      font-weight: 500;
+      border: 2px solid white;
+    }
+  }
+
+  &__textContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    span {
+      display: flex;
+      align-items: center;
+    }
+    padding: 1rem;
+  }
+
+  &__blocks {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+  }
+
+  &__block {
+    height: 1rem;
+    background-color: $color__primary;
+    transition: all 0.3s;
+
+    &--hidden {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+
+    &--active {
+      transform: translateX(0px);
+    }
+  }
+}

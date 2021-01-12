@@ -1,0 +1,34 @@
+@import "./variables.scss";
+
+.offerList {
+  list-style: none;
+  list-style-type: none;
+  display: block;
+  padding-left: 0px;
+
+  &__item {
+    font-family: "roboto", Arial;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__icon {
+    font-size: 2rem;
+    color: $color__primary;
+    min-width: 3rem;
+    width: 10%;
+  }
+
+  &__text {
+    padding-left: 1rem;
+    margin: 0px;
+    align-self: flex-start;
+  }
+
+  &__outer {
+    display: flex;
+    justify-content: center;
+  }
+}

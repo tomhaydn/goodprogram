@@ -1,0 +1,3 @@
+User-agent: * 
+Disallow: /legal/
+sitemap: https://goodprogram.com.au/sitemap.xml
