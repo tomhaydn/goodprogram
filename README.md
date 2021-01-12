@@ -1,4 +1,4 @@
-# Foobar
+# Introduction & Explanation
 
 [Good Program](https://goodprogram.com.au/) is a Web Design and Development Business located in Sydney. We specialize in custom web development and hi-performance web technologies that help clients get an edge on their competition.
 
