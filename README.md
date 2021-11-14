@@ -1,6 +1,6 @@
 # Introduction & Explanation
 
-[Good Program](https://goodprogram.com.au/) is a Web Design and Development Business located in Sydney. We specialize in custom web development and hi-performance web technologies that help clients get an edge on their competition.
+[Good Program](https://goodprogram.com.au/) is a Web Design and Development Business located in Sydney. Specializing in custom web development and hi-performance web technologies that help clients get an edge on their competition.
 
 This is the source code for the Good Program website with some sensitive omissions. It is built by incorporating:
 - React/Next.js
@@ -22,8 +22,3 @@ Because portions have been ommited this website will not be functional as is.
 ## Usage
 
 Because portions have been ommited this website will not be functional as is.
-
-If you would like to get in touch with me you may do so via:
-- tomeadydev@gmail.com
-- info@goodprogram.com.au
-- Contact via the website
